@@ -1,0 +1,18 @@
+Password: 'CyberSecurity2026'
+
+Algorithm Output length   Hash
+MD5       32              0333d227c04a4d31954c0c84dbf53431
+SHA1      40              d73b31f2ee519d559beb70cdab49a5b8176195
+SHA256    64              3b50ef71ec9163bbd4dc05c58193f26382096e2d9ef6afd0d6b049c6182b38c
+
+Avalanche Effect Demonstration (SHA-256)
+
+Original password : 'CyberSecurity2026'
+
+Original SHA-256   : 3b50ef71ec9163bbd4dc05c58193f26382096e2d9ef6afd0d6b049c6182b38c
+
+Modified password : 'CyberSecurity2021'  (last character changed)
+
+Modified SHA-256   : 63888752a4d9c568067a2ef3721787de210da3d1d4e30a753c1780a90798583
+
+Hex characters that differ: 62 / 64
