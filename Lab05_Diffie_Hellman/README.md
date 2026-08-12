@@ -13,3 +13,9 @@ Public A  ───────→     ←──── Public B
 B^a mod p                   A^b mod p
   |                             |
   └────────── SAME KEY ─────────┘p
+It helps solve the key distribution problem.
+
+Applications:
+TLS
+VPNs
+SSH 
