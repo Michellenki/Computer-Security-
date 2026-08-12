@@ -45,3 +45,19 @@ decrypted_message = private_key.decrypt(
     )
 )print("\nDecrypted message:")
 print(decrypted_message.decode())
+
+#Trying decryption using public.key
+try:
+    wrong_decryption = public_key.decrypt(
+        encrypted_message,
+        padding.OAEP(
+            mgf=padding.MGF1(algorithm=hashes.SHA256()),
+            algorithm=hashes.SHA256(),
+            label=None
+        )
+    )
+
+    print(wrong_decryption.decode())
+
+except Exception:
+    print("\nDecryption using the public key failed.")
