@@ -16,3 +16,18 @@ public_key = private_key.public_key()
 
 print("Private key generated!")
 print("Public key generated!")
+
+message = b"Computer Security Laboratory"
+encrypted_message = public_key.encrypt(
+    message,
+    padding.OAEP(
+        mgf=padding.MGF1(algorithm=hashes.SHA256()),
+        algorithm=hashes.SHA256(),
+        label=None
+    )
+)
+print("Original message:")
+print(message.decode())
+
+print("\nEncrypted message:")
+print(encrypted_message)
