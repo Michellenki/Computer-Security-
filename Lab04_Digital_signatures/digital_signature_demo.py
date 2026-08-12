@@ -23,3 +23,18 @@ print(message.decode())signature = private_key.sign(
     hashes.SHA256()
 )print("\nDigital signature:")
 print(signature)
+try:
+    public_key.verify(
+        signature,
+        message,
+        padding.PSS(
+            mgf=padding.MGF1(hashes.SHA256()),
+            salt_length=padding.PSS.MAX_LENGTH
+        ),
+        hashes.SHA256()
+    )
+
+    print("\nSignature is VALID!")
+
+except Exception:
+    print("\nSignature is INVALID!")
